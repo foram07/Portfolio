@@ -1,0 +1,112 @@
+/* ============================================================
+   DESIGN TOKENS  —  src/styles/base/tokens.css
+   Single source of truth for all design decisions.
+   ============================================================ */
+
+/* ── Dark mode (default) ── */
+:root {
+  /* Backgrounds */
+  --bg-primary:      #080C14;
+  --bg-secondary:    #0D1320;
+  --bg-card:         #111827;
+  --bg-card-hover:   #162033;
+  --bg-glass:        rgba(17, 24, 39, 0.70);
+
+  /* Borders */
+  --border-subtle:   rgba(255, 255, 255, 0.06);
+  --border-default:  rgba(255, 255, 255, 0.10);
+  --border-active:   rgba(99, 210, 255, 0.35);
+
+  /* Accent — Electric Cyan */
+  --accent:          #63D2FF;
+  --accent-dim:      #3AB5E6;
+  --accent-glow:     rgba(99, 210, 255, 0.18);
+  --accent-glow-lg:  rgba(99, 210, 255, 0.06);
+
+  /* Accent B — Violet */
+  --violet:          #A78BFA;
+  --violet-glow:     rgba(167, 139, 250, 0.12);
+
+  /* Semantic colours */
+  --emerald:         #34D399;
+  --amber:           #FBBF24;
+  --rose:            #F87171;
+
+  /* Text */
+  --text-primary:    #F0F6FF;
+  --text-secondary:  #8B9DB8;
+  --text-muted:      #4A5568;
+  --text-accent:     #63D2FF;
+
+  /* Gradients */
+  --gradient-brand:  linear-gradient(135deg, #63D2FF 0%, #A78BFA 100%);
+  --gradient-card:   linear-gradient(145deg, rgba(99,210,255,0.06) 0%, rgba(167,139,250,0.04) 100%);
+  --gradient-shine:  linear-gradient(90deg, transparent, rgba(99,210,255,0.12), transparent);
+
+  /* Typography */
+  --font-display:    'Syne', sans-serif;
+  --font-body:       'DM Sans', sans-serif;
+  --font-mono:       'JetBrains Mono', monospace;
+
+  /* Type scale */
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.25rem;
+  --text-2xl:  1.5rem;
+  --text-3xl:  1.875rem;
+  --text-4xl:  2.25rem;
+
+  /* Spacing */
+  --sp-1:  0.25rem;  --sp-2:  0.5rem;   --sp-3:  0.75rem;
+  --sp-4:  1rem;     --sp-6:  1.5rem;   --sp-8:  2rem;
+  --sp-10: 2.5rem;   --sp-12: 3rem;     --sp-16: 4rem;
+  --sp-20: 5rem;     --sp-24: 6rem;
+
+  /* Layout */
+  --max-width:   1200px;
+  --nav-height:  72px;
+  --radius:      12px;
+  --radius-lg:   20px;
+  --radius-xl:   32px;
+
+  /* Shadows */
+  --shadow-card:  0 4px 24px rgba(0, 0, 0, 0.40);
+  --shadow-hover: 0 8px 40px rgba(99,210,255,0.12), 0 4px 20px rgba(0,0,0,0.50);
+  --shadow-glow:  0 0 40px rgba(99, 210, 255, 0.20);
+
+  /* Transitions */
+  --tr-fast:   150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --tr-base:   250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --tr-slow:   400ms cubic-bezier(0.4, 0, 0.2, 1);
+  --tr-spring: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ── Light mode overrides ──────────────────────────────────
+   data-theme="light" sits on <html>, so the selector is
+   html[data-theme="light"] — NOT [data-theme="light"] alone.
+   ────────────────────────────────────────────────────────── */
+html[data-theme="light"] {
+  --bg-primary:     #F4F7FC;
+  --bg-secondary:   #E8EDF6;
+  --bg-card:        #FFFFFF;
+  --bg-card-hover:  #EEF2FA;
+  --bg-glass:       rgba(255, 255, 255, 0.85);
+  --border-subtle:  rgba(0, 0, 0, 0.05);
+  --border-default: rgba(0, 0, 0, 0.10);
+  --border-active:  rgba(14, 165, 233, 0.40);
+  --accent:         #0284C7;
+  --accent-dim:     #0369A1;
+  --accent-glow:    rgba(14, 165, 233, 0.15);
+  --accent-glow-lg: rgba(14, 165, 233, 0.06);
+  --violet:         #7C3AED;
+  --violet-glow:    rgba(124, 58, 237, 0.10);
+  --gradient-brand: linear-gradient(135deg, #0284C7 0%, #7C3AED 100%);
+  --text-primary:   #0D1320;
+  --text-secondary: #475569;
+  --text-muted:     #94A3B8;
+  --text-accent:    #0284C7;
+  --shadow-card:    0 4px 24px rgba(0, 0, 0, 0.06);
+  --shadow-hover:   0 8px 40px rgba(14,165,233,0.14), 0 4px 20px rgba(0,0,0,0.06);
+}

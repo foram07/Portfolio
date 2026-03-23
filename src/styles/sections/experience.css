@@ -1,0 +1,88 @@
+/* ============================================================
+   EXPERIENCE  —  src/styles/sections/experience.css
+   ============================================================ */
+
+.exp-timeline { position: relative; }
+.exp-timeline::before {
+  content: ''; position: absolute; left: 28px; top: 0; bottom: 0; width: 1px;
+  background: linear-gradient(180deg, var(--accent), var(--violet), transparent);
+}
+
+.exp-item { display: flex; gap: 24px; margin-bottom: 40px; }
+
+.exp-item__dot-col {
+  display: flex; flex-direction: column; align-items: center;
+  flex-shrink: 0; width: 56px;
+}
+.exp-item__dot {
+  width: 48px; height: 48px; border-radius: 12px;
+  background: var(--bg-card); border: 1px solid var(--border-default);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem; flex-shrink: 0; position: relative; z-index: 1;
+}
+
+.exp-item__card {
+  flex: 1; background: var(--bg-card);
+  border: 1px solid var(--border-default); border-radius: var(--radius-lg);
+  padding: 24px; transition: all var(--tr-base);
+}
+.exp-item__card:hover { border-color: var(--border-active); box-shadow: var(--shadow-hover); }
+
+.exp-item__header {
+  display: flex; align-items: flex-start;
+  justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 12px;
+}
+.exp-item__role { font-size: 1.1rem; font-family: var(--font-display); font-weight: 700; }
+.exp-item__meta { text-align: right; }
+.exp-item__company  { font-weight: 600; color: var(--accent); font-size: 0.9rem; }
+.exp-item__duration { font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); }
+
+.exp-item__desc { font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 14px; }
+
+.exp-item__highlights { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+.exp-item__highlight {
+  font-size: 0.85rem; color: var(--text-secondary);
+  padding-left: 16px; position: relative; line-height: 1.6;
+}
+.exp-item__highlight::before {
+  content: '→'; position: absolute; left: 0;
+  color: var(--accent); font-size: 0.75rem; top: 3px;
+}
+
+.exp-item__tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.exp-tag {
+  padding: 3px 10px; background: var(--accent-glow);
+  border: 1px solid rgba(99,210,255,.20); border-radius: 100px;
+  font-family: var(--font-mono); font-size: 0.68rem; color: var(--accent);
+}
+
+/* Education & Certs */
+.edu-certs { display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px; margin-top: 64px; }
+@media (max-width: 768px) { .edu-certs { grid-template-columns: 1fr; } }
+
+.edu-item {
+  background: var(--bg-card); border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg); padding: 20px; margin-bottom: 16px;
+  transition: all var(--tr-base);
+}
+.edu-item:hover { border-color: var(--border-active); }
+.edu-item__degree { font-weight: 700; font-size: 0.95rem; font-family: var(--font-display); margin-bottom: 4px; }
+.edu-item__school { color: var(--accent); font-size: 0.875rem; font-weight: 600; margin-bottom: 4px; }
+.edu-item__meta   { display: flex; gap: 12px; font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin-bottom: 10px; }
+.edu-item__highlights { display: flex; flex-direction: column; gap: 4px; }
+.edu-item__highlight {
+  font-size: 0.8rem; color: var(--text-secondary);
+  padding-left: 14px; position: relative;
+}
+.edu-item__highlight::before { content: '·'; position: absolute; left: 0; color: var(--accent); font-size: 1.2rem; line-height: 1.2; }
+
+.cert-item {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 18px; background: var(--bg-card);
+  border: 1px solid var(--border-default); border-radius: var(--radius);
+  margin-bottom: 12px; transition: all var(--tr-base);
+}
+.cert-item:hover { border-color: var(--border-active); }
+.cert-item__icon { font-size: 1.4rem; flex-shrink: 0; }
+.cert-item__name   { font-size: 0.875rem; font-weight: 600; margin-bottom: 2px; }
+.cert-item__issuer { font-size: 0.78rem; color: var(--text-muted); }

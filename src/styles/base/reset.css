@@ -1,0 +1,151 @@
+/* ============================================================
+   RESET & BASE  —  src/styles/base/reset.css
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── html element ─────────────────────────────────────────
+   Hard-coded dark bg on html (not via CSS var) so the page
+   is never white before tokens.css finishes parsing.
+   The inline <script> in index.html already sets data-theme
+   synchronously, so this matches immediately on first paint.
+   ────────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+html[data-theme="light"] {
+  background-color: #F4F7FC; /* light override — matches --bg-primary light */
+}
+
+/* ── body ─────────────────────────────────────────────────── */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  transition: background-color var(--tr-slow), color var(--tr-slow);
+}
+
+/* Dot-grid background texture */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(99,210,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99,210,255,0.025) 1px, transparent 1px);
+  background-size: 64px 64px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#app {
+  position: relative;
+  z-index: 1;
+}
+
+html[data-theme="light"] body::before {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px);
+}
+
+/* ── Scrollbar ───────────────────────────────────────────── */
+::-webkit-scrollbar          { width: 5px; }
+::-webkit-scrollbar-track    { background: var(--bg-secondary); }
+::-webkit-scrollbar-thumb    { background: var(--border-active); border-radius: 3px; }
+
+/* ── Selection ───────────────────────────────────────────── */
+::selection { background: var(--accent-glow); color: var(--accent); }
+
+/* ── Focus ───────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── Base elements ───────────────────────────────────────── */
+a { color: var(--accent); text-decoration: none; transition: color var(--tr-fast); }
+a:hover { color: var(--accent-dim); }
+
+img { max-width: 100%; height: auto; display: block; }
+ul, ol { list-style: none; }
+
+/* ── Scroll offset for fixed navbar ─────────────────────── */
+section[id] { scroll-margin-top: var(--nav-height); }
+
+/* ── Layout helpers ──────────────────────────────────────── */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--sp-6);
+}
+@media (max-width: 640px) { .container { padding: 0 var(--sp-4); } }
+
+.section { padding: 96px 0; position: relative; }
+@media (max-width: 768px) { .section { padding: 72px 0; } }
+
+.section--alt { background-color: var(--bg-secondary); }
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-default), transparent);
+}
+
+/* ── Grid utilities ──────────────────────────────────────── */
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--sp-6); }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-6); }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-6); }
+@media (max-width: 1024px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 1024px) { .grid-3 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px)  { .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; } }
+
+/* ── Text gradient utility ───────────────────────────────── */
+.text-gradient {
+  background: var(--gradient-brand);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 6s ease infinite;
+}
+
+/* ── Open-to-work pill ───────────────────────────────────── */
+.otw {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 5px 14px;
+  background: rgba(52,211,153,0.10);
+  border: 1px solid rgba(52,211,153,0.30);
+  border-radius: 100px;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--emerald);
+  letter-spacing: 0.06em;
+}
+.otw .dot {
+  width: 7px;
+  height: 7px;
+  background: var(--emerald);
+  border-radius: 50%;
+  animation: pulseDot 2s ease infinite;
+}
+
+/* ── Scroll-reveal utility ───────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible        { opacity: 1; transform: translateY(0); }
+.reveal-delay-1        { transition-delay: 0.1s; }
+.reveal-delay-2        { transition-delay: 0.2s; }
+.reveal-delay-3        { transition-delay: 0.3s; }
+.reveal-delay-4        { transition-delay: 0.4s; }

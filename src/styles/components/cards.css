@@ -1,0 +1,49 @@
+/* ============================================================
+   CARDS  —  src/styles/components/cards.css
+   ============================================================ */
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-6);
+  transition: all var(--tr-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-card);
+  opacity: 0;
+  transition: opacity var(--tr-base);
+  pointer-events: none;
+}
+
+.card:hover {
+  border-color: var(--border-active);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px);
+}
+
+.card:hover::before { opacity: 1; }
+
+/* Tech pill (used in About & Skills) */
+.tech-pill {
+  padding: 5px 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: 100px;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+  transition: all var(--tr-base);
+  cursor: default;
+}
+.tech-pill:hover {
+  border-color: var(--border-active);
+  color: var(--accent);
+  background: var(--accent-glow);
+}

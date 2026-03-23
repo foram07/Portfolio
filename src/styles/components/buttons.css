@@ -1,0 +1,75 @@
+/* ============================================================
+   BUTTONS  —  src/styles/components/buttons.css
+   ============================================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--tr-base);
+  border: none;
+  text-decoration: none;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shine sweep on hover */
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-shine);
+  transform: translateX(-100%);
+  transition: transform var(--tr-slow);
+}
+.btn:hover::after { transform: translateX(100%); }
+
+/* Variants */
+.btn--primary {
+  background: var(--accent);
+  color: var(--bg-primary);
+  box-shadow: 0 0 24px var(--accent-glow);
+}
+.btn--primary:hover {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 32px var(--accent-glow);
+  color: var(--bg-primary);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--accent);
+  border: 1.5px solid var(--border-active);
+}
+.btn--outline:hover {
+  background: var(--accent-glow);
+  transform: translateY(-2px);
+  color: var(--accent);
+}
+
+.btn--ghost {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-default);
+}
+.btn--ghost:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-active);
+  transform: translateY(-2px);
+  color: var(--text-primary);
+}
+
+/* Sizes */
+.btn--sm { padding: 8px 16px; font-size: var(--text-xs); }
+.btn--lg { padding: 14px 32px; font-size: var(--text-base); border-radius: 10px; }
+
+/* Full width */
+.btn--full { width: 100%; justify-content: center; }

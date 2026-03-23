@@ -1,0 +1,124 @@
+/* ============================================================
+   TESTIMONIALS SECTION  —  src/styles/sections/testimonials.css
+   ============================================================ */
+
+.testi__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 1024px) { .testi__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px)  { .testi__grid { grid-template-columns: 1fr; } }
+
+/* ── Testimonial card ───────────────────────────────────── */
+.testi-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  transition: all var(--tr-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.testi-card:hover {
+  border-color: var(--border-active);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px);
+}
+
+/* Large decorative quotation mark */
+.testi-card::before {
+  content: '\201C';
+  position: absolute;
+  top: 8px;
+  left: 18px;
+  font-size: 5rem;
+  font-family: var(--font-display);
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.12;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Subtle gradient wash on hover */
+.testi-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-card);
+  opacity: 0;
+  transition: opacity var(--tr-base);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.testi-card:hover::after {
+  opacity: 1;
+}
+
+/* ── Card internals ─────────────────────────────────────── */
+.testi-card__quote {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 24px;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+  /* Indent slightly to clear the decorative quote mark */
+  padding-top: 12px;
+}
+
+/* ── Author row ─────────────────────────────────────────── */
+.testi-card__author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.testi-card__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: var(--gradient-brand);
+  background-size: 200%;
+  animation: gradientShift 6s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #080C14;
+  flex-shrink: 0;
+  font-family: var(--font-display);
+}
+
+.testi-card__name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: var(--font-display);
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.testi-card__title {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .testi-card {
+    padding: 20px;
+  }
+
+  .testi-card__quote {
+    font-size: 0.85rem;
+  }
+}

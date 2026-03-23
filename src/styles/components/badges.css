@@ -1,0 +1,21 @@
+/* ============================================================
+   BADGES  —  src/styles/components/badges.css
+   ============================================================ */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  letter-spacing: 0.03em;
+}
+
+.badge--cyan    { background: var(--accent-glow);    color: var(--accent);   border: 1px solid rgba(99,210,255,.20); }
+.badge--violet  { background: var(--violet-glow);    color: var(--violet);   border: 1px solid rgba(167,139,250,.20); }
+.badge--emerald { background: rgba(52,211,153,.10);  color: var(--emerald);  border: 1px solid rgba(52,211,153,.20); }
+.badge--amber   { background: rgba(251,191,36,.10);  color: var(--amber);    border: 1px solid rgba(251,191,36,.20); }
+.badge--rose    { background: rgba(248,113,113,.10); color: var(--rose);     border: 1px solid rgba(248,113,113,.20); }

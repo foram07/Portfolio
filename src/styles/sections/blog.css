@@ -1,0 +1,105 @@
+/* ============================================================
+   BLOG SECTION  —  src/styles/sections/blog.css
+   ============================================================ */
+
+.blog__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 1024px) { .blog__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px)  { .blog__grid { grid-template-columns: 1fr; } }
+
+/* ── Blog card ──────────────────────────────────────────── */
+.blog-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  transition: all var(--tr-base);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Left accent line that grows on hover */
+.blog-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 0;
+  background: var(--gradient-brand);
+  border-radius: 0 0 3px 3px;
+  transition: height var(--tr-slow);
+}
+
+.blog-card:hover {
+  border-color: var(--border-active);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px);
+}
+
+.blog-card:hover::before {
+  height: 100%;
+}
+
+/* ── Card internals ─────────────────────────────────────── */
+.blog-card__tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.blog-card__title {
+  font-size: 1rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+  transition: color var(--tr-fast);
+}
+
+.blog-card:hover .blog-card__title {
+  color: var(--accent);
+}
+
+.blog-card__excerpt {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+/* ── Footer row ─────────────────────────────────────────── */
+.blog-card__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  padding-top: 16px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.blog-card__read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  transition: gap var(--tr-base);
+  text-decoration: none;
+}
+
+.blog-card:hover .blog-card__read-more {
+  gap: 10px;
+}

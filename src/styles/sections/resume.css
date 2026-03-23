@@ -1,0 +1,90 @@
+/* ============================================================
+   RESUME SECTION  —  src/styles/sections/resume.css
+   ============================================================ */
+
+.resume__card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: 24px;
+  padding: 64px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Decorative glow orb top-right */
+.resume__card::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, var(--accent-glow), transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Decorative glow orb bottom-left */
+.resume__card::after {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  left: -40px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, var(--violet-glow), transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.resume__icon {
+  font-size: 4rem;
+  margin-bottom: 24px;
+  display: block;
+  animation: float 4s ease-in-out infinite;
+}
+
+.resume__card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.resume__card p {
+  max-width: 400px;
+  margin: 0 auto 32px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.resume__actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .resume__card {
+    padding: 40px 24px;
+  }
+
+  .resume__card h3 {
+    font-size: 1.4rem;
+  }
+
+  .resume__actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .resume__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
