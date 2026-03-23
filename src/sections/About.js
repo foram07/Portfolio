@@ -28,8 +28,6 @@ function About() {
               <div class="about__avatar-bg"></div>
               <span class="about__initials">${initials}</span>
             </div>
-            <div class="about__float-badge about__float-badge--tr">🏆 NeurIPS Author</div>
-            <div class="about__float-badge about__float-badge--bl">⚡ 5+ Yrs · CMU Alum</div>
           </div>
 
           <!-- Content column -->

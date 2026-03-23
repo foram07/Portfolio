@@ -78,9 +78,6 @@ function ExperienceItem(job, index) {
  * @returns {string} HTML string
  */
 function EducationItem(edu) {
-  const highlights = edu.highlights
-    .map(h => `<li class="edu-item__highlight">${h}</li>`)
-    .join("");
 
   return `
     <div class="edu-item">
@@ -88,9 +85,8 @@ function EducationItem(edu) {
       <div class="edu-item__school">${edu.school}</div>
       <div class="edu-item__meta">
         <span>${edu.year}</span>
-        <span>GPA: ${edu.gpa}</span>
+        <span>Result: ${edu.gpa}</span>
       </div>
-      <ul class="edu-item__highlights">${highlights}</ul>
     </div>`;
 }
 

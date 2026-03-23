@@ -127,33 +127,24 @@ const EXPERIENCE = [
  *   school:     string,
  *   year:       string,
  *   gpa:        string,
- *   highlights: string[],
  * }} EducationEntry
  */
 
 /** @type {EducationEntry[]} */
 const EDUCATION = [
   {
-    degree: "M.S. Computer Science (AI Specialization)",
-    school: "Carnegie Mellon University",
+    degree: "Master of Science in Computer Applications",
+    school: "Savitribai Phule Pune University",
     // Graduation year
-    year:   "2020",
+    year:   "2014",
     // Format: "X.X / 4.0" or "X.X / 10" etc.
-    gpa:    "3.9 / 4.0",
-    highlights: [
-      "Thesis: Efficient Transformers for Low-Resource NLP",
-      "Graduate Teaching Assistant — Deep Learning (15-618)",
-    ],
+    gpa:    "First Class",
   },
   {
-    degree: "B.Tech Computer Engineering",
-    school: "IIT Bombay",
-    year:   "2018",
-    gpa:    "9.1 / 10",
-    highlights: [
-      "Gold Medal — Best B.Tech Project (2018 cohort)",
-      "ACM-ICPC Asia Regional Finalist",
-    ],
+    degree: "Bachelor of Science in Computer Science",
+    school: "Savitribai Phule Pune University",
+    year:   "2011",
+    gpa:    "Higher Secondary Class",
   },
 ];
 

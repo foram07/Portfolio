@@ -33,7 +33,6 @@
  *   description:   string,
  *   problem:       string,
  *   approach:      string,
- *   results:       ProjectResult[],
  *   stack:         string[],
  *   github:        string,
  *   demo:          string|null,
@@ -65,11 +64,6 @@ const PROJECTS = [
       "GPT-4 + custom FAISS vector store + BM25 hybrid retrieval, " +
       "LangChain orchestration, fine-tuned reranker.",
     // 3 quantified outcomes — shown as metric cards inside the project card
-    results: [
-      { metric: "Accuracy",       value: "91%",   delta: "+34% vs baseline"   },
-      { metric: "Review Time",    value: "−78%",  delta: "from 8 hr to 1.7 hr"},
-      { metric: "Annual Savings", value: "$1.2M", delta: "per client"          },
-    ],
     // Shown as monospace pills at the bottom of the card
     stack:  ["GPT-4", "LangChain", "FAISS", "FastAPI", "PostgreSQL", "Docker"],
     github: "https://github.com/aryanmehta-ai/legalmind",
@@ -93,11 +87,6 @@ const PROJECTS = [
     approach:
       "YOLOv8 fine-tuned on 50K custom images + PatchCore anomaly " +
       "detection + ONNX runtime for edge deployment at 12ms.",
-    results: [
-      { metric: "Detection Rate",  value: "99.2%", delta: "+14.2% vs manual" },
-      { metric: "Inference Speed", value: "12ms",  delta: "real-time on edge" },
-      { metric: "False Positives", value: "−82%",  delta: "vs v1 model"       },
-    ],
     stack:  ["YOLOv8", "PyTorch", "ONNX", "OpenCV", "FastAPI", "Kubernetes"],
     github: "https://github.com/aryanmehta-ai/defectvision",
     demo:   "https://defectvision-demo.vercel.app",
@@ -120,11 +109,6 @@ const PROJECTS = [
     approach:
       "FinBERT fine-tuned on proprietary dataset + Kafka streaming + " +
       "custom entity-linking for stock ticker resolution.",
-    results: [
-      { metric: "F1 Score",   value: "94.3%",  delta: "+11% vs FinBERT base" },
-      { metric: "Throughput", value: "500K+",  delta: "articles / day"        },
-      { metric: "Latency",    value: "<100ms", delta: "end-to-end"            },
-    ],
     stack:  ["FinBERT", "Kafka", "Spark", "Redis", "Docker", "AWS"],
     github: "https://github.com/aryanmehta-ai/sentimentstream",
     // null hides the Live Demo button
@@ -148,11 +132,6 @@ const PROJECTS = [
     approach:
       "SDXL + DreamBooth LoRA fine-tuning pipeline + ComfyUI backend " +
       "+ custom training orchestration on A100 cluster.",
-    results: [
-      { metric: "Style Consistency", value: "89%",    delta: "CLIP similarity score" },
-      { metric: "Training Time",     value: "22 min", delta: "per custom LoRA"       },
-      { metric: "Cost / Image",      value: "$0.004", delta: "vs $0.04 DALL-E"       },
-    ],
     stack:  ["SDXL", "LoRA", "ComfyUI", "FastAPI", "GCP", "Celery"],
     github: "https://github.com/aryanmehta-ai/imagegen-studio",
     demo:   "https://imagegenstudio.vercel.app",
@@ -175,11 +154,6 @@ const PROJECTS = [
     approach:
       "XGBoost ensemble + SHAP feature importance + Feast feature store " +
       "+ automated Salesforce CRM task creation.",
-    results: [
-      { metric: "AUC-ROC",       value: "0.94",  delta: "30-day churn prediction" },
-      { metric: "Churn Reduced", value: "−31%",  delta: "in 6 months"             },
-      { metric: "ARR Saved",     value: "$2.8M", delta: "protected"                },
-    ],
     stack:  ["XGBoost", "SHAP", "Feast", "Airflow", "dbt", "Salesforce API"],
     github: "https://github.com/aryanmehta-ai/churnshield",
     demo:   null,
@@ -202,11 +176,6 @@ const PROJECTS = [
     approach:
       "CodeBERT embeddings + AST-aware chunking strategy + Pinecone " +
       "vector DB + custom reranker trained on code-query pairs.",
-    results: [
-      { metric: "MRR@10",           value: "0.82", delta: "+0.31 vs keyword search" },
-      { metric: "Dev Productivity", value: "+40%", delta: "time-to-find metric"     },
-      { metric: "Index Size",       value: "2M+",  delta: "code snippets"           },
-    ],
     stack:  ["CodeBERT", "Pinecone", "FastAPI", "TypeScript", "PostgreSQL", "Docker"],
     github: "https://github.com/aryanmehta-ai/neuralsearch",
     demo:   "https://neuralsearch-demo.vercel.app",

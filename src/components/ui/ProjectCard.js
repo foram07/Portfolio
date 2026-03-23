@@ -8,14 +8,8 @@ const EXT_ICON = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" st
 
 function ProjectCard(project) {
   const { title, category, categoryLabel, badgeVariant, color,
-          description, problem, approach, results, stack,
+          description, problem, approach,  stack,
           github, demo, featured } = project;
-
-  const resultItems = results.map(r => `
-    <div class="result-item">
-      <span class="result-item__val">${r.value}</span>
-      <span class="result-item__delta">${r.metric}</span>
-    </div>`).join("");
 
   const stackPills = stack.map(s =>
     `<span class="stack-pill">${s}</span>`).join("");
@@ -44,8 +38,6 @@ function ProjectCard(project) {
         <p class="project-card__text">${problem}</p>
         <p class="project-card__section-label">Approach</p>
         <p class="project-card__text">${approach}</p>
-        <p class="project-card__section-label">Results</p>
-        <div class="project-card__results">${resultItems}</div>
         <p class="project-card__section-label">Stack</p>
         <div class="project-card__stack">${stackPills}</div>
       </div>
