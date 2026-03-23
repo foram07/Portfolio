@@ -42,7 +42,6 @@
   safeMountSection("experience-root",   Experience,   "Experience");
   safeMountSection("resume-root",       Resume,       "Resume");
   safeMountSection("blog-root",         Blog,         "Blog");
-  safeMountSection("testimonials-root", Testimonials, "Testimonials");
   safeMountSection("contact-root",      Contact,      "Contact");
 
   // ── 3. Interactive modules (run after DOM is populated) ───
@@ -50,7 +49,6 @@
   safeInit(initScrollReveal,      "ScrollReveal");
   safeInit(initActiveNav,         "ActiveNav");
   safeInit(initCounterAnimation,  "CounterAnimation");
-  safeInit(initSkillBars,         "SkillBars");
   safeInit(initProjectFilter,     "ProjectFilter");
 
   // ── 4. Reveal elements already above the fold ────────────

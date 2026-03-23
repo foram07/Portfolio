@@ -88,6 +88,5 @@ function Blog() {
         </div>
 
       </div>
-    </section>
-    <div class="section-divider" aria-hidden="true"></div>`;
+    </section>`;
 }
