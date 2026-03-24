@@ -1,57 +1,308 @@
 /* ============================================================
-   ABOUT  —  src/styles/sections/about.css
+   ABOUT SECTION  —  src/styles/sections/about.css
+   No timeline. Story told through content, not dates.
    ============================================================ */
 
-.about__grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 64px; align-items: start; }
-@media (max-width: 900px) { .about__grid { grid-template-columns: 1fr; gap: 40px; } }
+/* ── Top: heading + story columns ──────────────────────── */
+.about__top {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 72px;
+  align-items: start;
+  margin-bottom: 0;
+}
 
-.about__avatar-wrap { position: relative; }
-.about__avatar {
-  width: 100%; aspect-ratio: 1;
-  border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, var(--bg-card), var(--bg-card-hover));
+@media (max-width: 900px) {
+  .about__top {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.about__heading {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 12px 0 0;
+  position: sticky;
+  top: calc(var(--nav-height) + 32px);
+}
+
+.about__story-col {
+  padding-top: 6px;
+}
+
+.about__story-para {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.about__story-para:last-child {
+  margin-bottom: 0;
+}
+
+/* First paragraph slightly larger — lead paragraph */
+.about__story-para:first-child {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  font-weight: 400;
+}
+
+/* ── Inner divider ──────────────────────────────────────── */
+.about__inner-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--border-default),
+    transparent
+  );
+  margin: 64px 0;
+}
+
+/* ── Middle: strengths + sidebar ────────────────────────── */
+.about__mid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 72px;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .about__mid {
+    grid-template-columns: 1fr 280px;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 800px) {
+  .about__mid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* ── Strength items ─────────────────────────────────────── */
+.about__strengths {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.about__strength {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--border-subtle);
+  transition: padding-left var(--tr-base);
+}
+
+.about__strength:first-of-type {
+  padding-top: 0;
+}
+
+.about__strength:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.about__strength:hover {
+  padding-left: 6px;
+}
+
+.about__strength-icon {
+  font-size: 0.7rem;
+  color: var(--accent);
+  flex-shrink: 0;
+  margin-top: 5px;
+  font-style: normal;
+  letter-spacing: 0;
+  line-height: 1;
+  opacity: 0.7;
+}
+
+.about__strength-title {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.about__strength-body {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* ── Sidebar cards ──────────────────────────────────────── */
+.about__sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Shared card base */
+.about__cred-card,
+.about__focus-card {
+  background: var(--bg-card);
   border: 1px solid var(--border-default);
-  display: flex; align-items: center; justify-content: center;
-  position: relative; overflow: hidden;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
 }
-.about__initials {
-  font-family: var(--font-display); font-size: 6rem; font-weight: 800;
-  background: var(--gradient-brand); -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; background-clip: text;
-}
-.about__avatar-bg {
-  position: absolute; inset: 0;
-  background: radial-gradient(circle at 30% 30%, rgba(99,210,255,.08), transparent 60%),
-              radial-gradient(circle at 70% 70%, rgba(167,139,250,.06), transparent 60%);
-}
-.about__float-badge {
-  position: absolute; background: var(--bg-card); border: 1px solid var(--border-active);
-  border-radius: var(--radius); padding: 8px 14px;
-  font-size: 0.8rem; font-weight: 600; color: var(--text-primary);
-  white-space: nowrap; box-shadow: var(--shadow-card);
-}
-.about__float-badge--tr { top: -14px; right: -14px; animation: float 5s ease-in-out infinite; }
-.about__float-badge--bl { bottom: -14px; left: -14px; animation: float 5s ease-in-out infinite 2s; }
 
-.about__narrative {
-  padding: 20px 24px; background: var(--bg-card);
-  border-radius: var(--radius); border-left: 3px solid var(--accent);
-  margin-bottom: var(--sp-8);
+.about__cred-header,
+.about__focus-header {
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-secondary);
 }
-.about__narrative p { font-size: 0.95rem; }
 
-.about__strengths { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: var(--sp-8); }
-@media (max-width: 640px) { .about__strengths { grid-template-columns: 1fr; } }
-
-.strength-item {
-  display: flex; align-items: flex-start; gap: 12px;
-  padding: 14px; background: var(--bg-card);
-  border-radius: var(--radius); border: 1px solid var(--border-default);
-  transition: all var(--tr-base);
+/* ── Credential card ────────────────────────────────────── */
+.about__cred-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
-.strength-item:hover { border-color: var(--border-active); }
-.strength-item__icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
-.strength-item__title { font-size: var(--text-sm); margin-bottom: 2px; font-weight: 600; }
-.strength-item__desc  { font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; }
 
-.about__tech { display: flex; flex-wrap: wrap; gap: var(--sp-2); }
+.about__credential {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background var(--tr-base);
+}
+
+.about__credential:last-child {
+  border-bottom: none;
+}
+
+.about__credential:hover {
+  background: var(--bg-card-hover);
+}
+
+.about__credential-tag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.about__credential-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.about__credential-issuer {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+/* ── Focus card ─────────────────────────────────────────── */
+.about__focus-items {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about__focus-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  line-height: 1;
+}
+
+.about__focus-item::before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+/* ── Technology groups ──────────────────────────────────── */
+.about__skills {
+  max-width: 860px;
+}
+
+.about__skill-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.about__skill-group {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 24px;
+  align-items: baseline;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.about__skill-group:last-child {
+  border-bottom: none;
+}
+
+.about__skill-group-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.about__skill-group-items {
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.about__skill-sep {
+  color: var(--text-muted);
+  margin: 0 7px;
+  font-size: 0.7rem;
+  font-weight: 300;
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .about__heading {
+    position: static;
+    font-size: 2rem;
+  }
+
+  .about__skill-group {
+    grid-template-columns: 80px 1fr;
+    gap: 16px;
+  }
+
+  .about__inner-divider {
+    margin: 48px 0;
+  }
+
+  .about__strength:hover {
+    padding-left: 0;
+  }
+}

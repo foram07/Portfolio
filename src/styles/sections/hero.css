@@ -75,22 +75,12 @@
 /* ── Row 2: Name ────────────────────────────────────────── */
 .hero__name {
   font-family: var(--font-display);
-  font-size: clamp(3.2rem, 8vw, 7rem);
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  line-height: 0.95;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
   color: var(--text-primary);
-  margin-bottom: 32px;
-
-  /* Subtle gradient on the name — restrained, not neon */
-  background: linear-gradient(
-    135deg,
-    var(--text-primary) 0%,
-    var(--text-secondary) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  margin-bottom: 28px;
 }
 
 /* ── Row 3: Domain tags ─────────────────────────────────── */
@@ -257,8 +247,8 @@
   }
 
   .hero__name {
-    font-size: clamp(2.8rem, 10vw, 4rem);
-    margin-bottom: 24px;
+    font-size: clamp(1.8rem, 6vw, 2.4rem);
+    margin-bottom: 20px;
   }
 
   .hero__stats {
