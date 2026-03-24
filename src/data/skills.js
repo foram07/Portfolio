@@ -11,7 +11,7 @@ const SKILLS = {
       title: "Languages",
       icon:  "⌨️",
       items: [
-        "Python", "Kotlin", "Java", "SQL", "Bash / Shell", "C++", "JavaScript",
+        "Python", "Kotlin", "Java", "SQL", "Bash / Shell", "JavaScript",
       ],
     },
     {

@@ -1,131 +1,125 @@
 // ============================================================
 // HERO SECTION  —  src/sections/Hero.js
+//
+// Full-width editorial layout. No card. No two columns.
+// Strong typographic hierarchy with credential strip.
 // ============================================================
 
 function Hero() {
-  const { name, title, subtitle, tagline, resumeUrl, stats, location, email } = PERSONAL;
+  const { name, resumeUrl, stats } = PERSONAL;
 
-  const statItems = stats.map(s => `
-    <div class="hero__stat">
-      <span class="hero__stat-val"
-            data-target="${parseFloat(s.value)}"
-            data-suffix="${s.suffix}">
-        ${s.value}${s.suffix}
-      </span>
-      <span class="hero__stat-label">${s.label}</span>
+  // Credential badges shown beneath the name
+  const credentials = [
+    {
+      label: "Professional Certificate",
+      detail: "Generative AI & Machine Learning · E&ICT Academy, IIT Kanpur",
+    },
+    {
+      label: "Android Development",
+      detail: "5 Years Industry Experience · Kotlin · Jetpack Compose",
+    },
+  ];
+
+  // Key domain tags shown as a clean inline row
+  const domains = [
+    "Machine Learning",
+    "Generative AI",
+    "Natural Language Processing",
+    "Computer Vision",
+    "Android Development",
+  ];
+
+  const credentialItems = credentials.map(c => `
+    <div class="hero__credential">
+      <span class="hero__credential-label">${c.label}</span>
+      <span class="hero__credential-detail">${c.detail}</span>
     </div>`).join("");
 
-  const highlights = [
-    "NLP · Computer Vision · Generative AI",
-    "From research prototype to production system",
-    "5 yrs Android · 5 yrs ML/AI",
-  ];
+  const domainItems = domains.map((d, i) => `
+    <span class="hero__domain">${d}</span>
+    ${i < domains.length - 1
+      ? '<span class="hero__domain-sep" aria-hidden="true">·</span>'
+      : ''}`).join("");
+
 
   return `
     <section id="hero" class="hero" aria-label="Introduction">
 
-      <!-- Subtle grid lines — decorative -->
-      <div class="hero__grid-lines" aria-hidden="true">
-        <span></span><span></span><span></span><span></span>
-      </div>
+      <!-- Fine horizontal rule lines — structural decoration -->
+      <div class="hero__rule hero__rule--top" aria-hidden="true"></div>
+      <div class="hero__rule hero__rule--mid"  aria-hidden="true"></div>
 
       <div class="container">
-        <div class="hero__layout">
+        <div class="hero__body">
 
-          <!-- ── Left column ── -->
-          <div class="hero__left">
-
-            <!-- Status pill -->
-            <div class="hero__status" style="animation-delay:.05s">
-              <span class="otw">
-                <span class="dot" aria-hidden="true"></span>
-                ${PERSONAL.availability}
-              </span>
-            </div>
-
-            <!-- Name -->
-            <h1 class="hero__name" style="animation-delay:.15s">
-              ${name}
-            </h1>
-
-            <!-- Title block -->
-            <div class="hero__titles" style="animation-delay:.25s">
-              <span class="hero__title-primary">${title}</span>
-              <span class="hero__title-sep" aria-hidden="true">&amp;</span>
-              <span class="hero__title-secondary">${subtitle}</span>
-            </div>
-
-            <!-- Tagline -->
-            <p class="hero__tagline" style="animation-delay:.35s">
-              ${tagline}
-            </p>
-
-            <!-- Highlight pills -->
-            <ul class="hero__highlights" aria-label="Specialisations" style="animation-delay:.45s">
-              ${highlights.map(h => `<li class="hero__highlight">${h}</li>`).join("")}
-            </ul>
-
-            <!-- CTA row -->
-            <div class="hero__cta" style="animation-delay:.55s">
-              ${Button({ label: "View Projects",    href: "#projects", variant: "primary", size: "lg", icon: ICON_ARROW_R })}
-              ${Button({ label: "Download Resume",  href: resumeUrl,   variant: "outline", size: "lg", icon: ICON_DOWNLOAD, download: true })}
-            </div>
-
+          <!-- ── Row 1: status + location ── -->
+          <div class="hero__meta reveal">
+            <span class="otw">
+              <span class="dot" aria-hidden="true"></span>
+              ${PERSONAL.availability}
+            </span>
+            <span class="hero__meta-sep" aria-hidden="true"></span>
+            <span class="hero__location">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              ${PERSONAL.location}
+            </span>
           </div>
 
-          <!-- ── Right column: profile card ── -->
-          <div class="hero__right" style="animation-delay:.3s">
-            <div class="hero__card">
+          <!-- ── Row 2: Name — the focal point ── -->
+          <h1 class="hero__name reveal reveal-delay-1">
+            ${name}
+          </h1>
 
-              <!-- Card header -->
-              <div class="hero__card-header">
-                <div class="hero__avatar" aria-hidden="true">
-                  ${PERSONAL.initials}
-                </div>
-                <div class="hero__card-identity">
-                  <span class="hero__card-name">${name}</span>
-                  <span class="hero__card-role">${title} · ${subtitle}</span>
-                  <span class="hero__card-location">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" aria-hidden="true">
-                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                      <circle cx="12" cy="10" r="3"/>
-                    </svg>
-                    ${location}
-                  </span>
-                </div>
-              </div>
+          <!-- ── Row 3: Domain tags ── -->
+          <div class="hero__domains reveal reveal-delay-2" aria-label="Specialisations">
+            ${domainItems}
+          </div>
 
-              <!-- Divider -->
-              <div class="hero__card-divider"></div>
+          <!-- ── Row 4: Credential strip ── -->
+          <div class="hero__credentials reveal reveal-delay-2" aria-label="Credentials">
+            ${credentialItems}
+          </div>
 
-              <!-- Stats grid -->
-              <div class="hero__stats" role="list" aria-label="Key metrics">
-                ${statItems}
-              </div>
+          <!-- ── Row 5: Tagline ── -->
+          <p class="hero__tagline reveal reveal-delay-3">
+            Building intelligent systems that bridge research and production —
+            grounded in engineering discipline and five years of shipping
+            real products into people's hands.
+          </p>
 
-              <!-- Divider -->
-              <div class="hero__card-divider"></div>
+        
 
-              <!-- Contact line -->
-              <div class="hero__card-contact">
-                <a href="mailto:${email}" class="hero__card-email">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
-                       stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                    <polyline points="22,6 12,13 2,6"/>
-                  </svg>
-                  ${email}
-                </a>
-                ${Button({ label: "Get in Touch", href: "#contact", variant: "ghost", size: "sm" })}
-              </div>
-
-            </div>
+          <!-- ── Row 7: CTA buttons ── -->
+          <div class="hero__cta reveal reveal-delay-4">
+            ${Button({
+              label:   "View Projects",
+              href:    "#projects",
+              variant: "primary",
+              size:    "lg",
+              icon:    ICON_ARROW_R,
+            })}
+            ${Button({
+              label:    "Download Resume",
+              href:     resumeUrl,
+              variant:  "outline",
+              size:     "lg",
+              icon:     ICON_DOWNLOAD,
+              download: true,
+            })}
+            ${Button({
+              label:   "Contact Me",
+              href:    "#contact",
+              variant: "ghost",
+              size:    "lg",
+            })}
           </div>
 
         </div>
       </div>
-
     </section>
     <div class="section-divider" aria-hidden="true"></div>`;
 }
