@@ -155,7 +155,7 @@ const PROJECTS = [
       "XGBoost ensemble + SHAP feature importance + Feast feature store " +
       "+ automated Salesforce CRM task creation.",
     stack:  ["XGBoost", "SHAP", "Feast", "Airflow", "dbt", "Salesforce API"],
-    github: "https://github.com/aryanmehta-ai/churnshield",
+    github: "https://github.com/foram07/Customer-Churn-Prediction",
     demo:   null,
   },
 
@@ -180,6 +180,38 @@ const PROJECTS = [
     github: "https://github.com/aryanmehta-ai/neuralsearch",
     demo:   "https://neuralsearch-demo.vercel.app",
   },
+
+ {
+    id:            7,
+    title:         "MathGPT-Agents — AI Math Problem Solver",
+    category:      "genai",
+    categoryLabel: "Generative AI",
+    badgeVariant:  "amber",
+    color:         "#FBBF24",
+    featured:      false,
+    description:
+         "AI-powered mathematical problem solver and knowledge " +
+    "assistant using LLM-driven agents for step-by-step " +
+    "reasoning, calculations, and factual information retrieval.",
+    problem:
+       "Solving mathematical problems and finding reliable " +
+    "contextual information often requires switching between " +
+    "calculators, search tools, and reasoning workflows.",
+    approach:
+       "Groq-hosted Llama 3.1 8B Instant + LangChain ReAct agent " +
+    "orchestration + custom calculator and reasoning tools + " +
+    "Wikipedia search integration + Streamlit interactive UI.",
+    stack:  [  "Python",
+    "Streamlit",
+    "LangChain",
+    "Groq API",
+    "Llama 3.1 8B Instant",
+    "Wikipedia API",
+    "LCEL"],
+    github: "https://github.com/foram07/MathGPT-Agents",
+    demo:   null,
+  },
+
 ];
 
 // ── Filter buttons shown above the project grid ────────────
