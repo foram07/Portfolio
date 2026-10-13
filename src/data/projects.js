@@ -146,15 +146,26 @@ const PROJECTS = [
     color:         "#F87171",
     featured:      false,
     description:
-      "XGBoost churn prediction with SHAP explainability and " +
-      "automated CRM intervention triggers.",
+      "Machine learning application that predicts customer " +
+    "churn using a trained neural network and an interactive " +
+    "interface for exploring customer retention risks.",
     problem:
-      "SaaS company losing 8% MoM to churn with no early warning " +
-      "system or playbook for intervention.",
+     "Businesses need to identify customers who are likely " +
+    "to leave their services so they can understand churn " +
+    "risk and take proactive customer retention measures.",
+
     approach:
-      "XGBoost ensemble + SHAP feature importance + Feast feature store " +
-      "+ automated Salesforce CRM task creation.",
-    stack:  ["XGBoost", "SHAP", "Feast", "Airflow", "dbt", "Salesforce API"],
+   "Neural network model + customer demographic and account " +
+    "features + gender label encoding + geographic one-hot " +
+    "encoding + feature scaling + interactive prediction " +
+    "application for customer churn classification.",
+
+    stack:  [ "Python",
+    "TensorFlow / Keras",
+    "Scikit-learn",
+    "Pandas",
+    "NumPy",
+    "Streamlit"],
     github: "https://github.com/foram07/Customer-Churn-Prediction",
     demo:   null,
   },
