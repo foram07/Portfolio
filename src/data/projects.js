@@ -222,6 +222,181 @@ const PROJECTS = [
     github: "https://github.com/foram07/MathGPT-Agents",
     demo:   null,
   },
+{
+id:            8,
+title:         "Enterprise Knowledge Intelligence Platform",
+category:      "genai",
+categoryLabel: "Generative AI",
+badgeVariant:  "amber",
+color:         "#FBBF24",
+featured:      true,
+description:
+"Enterprise-grade RAG assistant that answers questions " +
+"from documents with source citations, hybrid retrieval, " +
+"and evidence-grounded responses.",
+problem:
+"Searching large collections of company documents manually " +
+"is time-consuming, while basic LLM chatbots can generate " +
+"answers without reliable supporting evidence.",
+approach:
+"LangChain + LangGraph orchestration + hybrid BM25 and " +
+"vector retrieval + reranking + corrective retrieval " +
+"fallbacks + source citations + LangSmith evaluation " +
+"and observability + FastAPI backend and Streamlit UI.",
+stack: [
+"Python",
+"LangChain",
+"LangGraph",
+"FastAPI",
+"ChromaDB",
+"BM25",
+"Vector Search",
+"LangSmith",
+"Streamlit"
+],
+github: "https://github.com/foram07/enterprise-knowledge-intelligence",
+demo:   null,
+},
+{
+  id:            9,
+  title:         "Autonomous Business Research & Decision Agent",
+  category:      "genai",
+  categoryLabel: "Generative AI",
+  badgeVariant:  "amber",
+  color:         "#FBBF24",
+  featured:      true,
+  description:
+    "Multi-agent research system that investigates complex " +
+    "business questions, verifies evidence, compares findings, " +
+    "and generates structured decision reports.",
+  problem:
+    "Business research often requires collecting information " +
+    "from multiple sources, checking conflicting claims, " +
+    "and synthesizing evidence into actionable reports.",
+  approach:
+    "LangGraph stateful workflows + specialized researcher, " +
+    "analyst, and fact-checker agents + web search tools + " +
+    "source verification + contradiction detection + human " +
+    "approval checkpoints + LangSmith tracing and evaluation.",
+  stack: [
+    "Python",
+    "LangGraph",
+    "LangChain",
+    "LLM API",
+    "Web Search API",
+    "Pydantic",
+    "FastAPI",
+    "LangSmith",
+    "Streamlit"
+  ],
+  github: "https://github.com/foram07/autonomous-business-research-agent",
+  demo:   null,
+},
+{
+  id:            10,
+  title:         "Fine-Tuned Customer Feedback Intelligence",
+  category:      "nlp",
+  categoryLabel: "Natural Language Processing",
+  badgeVariant:  "blue",
+  color:         "#60A5FA",
+  featured:      true,
+  description:
+    "Transformer-based NLP system that classifies customer " +
+    "feedback by sentiment, issue category, urgency, and " +
+    "potential support escalation requirements.",
+  problem:
+    "Organizations receive large volumes of unstructured " +
+    "customer feedback that must be categorized accurately " +
+    "to identify recurring issues and prioritize responses.",
+  approach:
+    "Hugging Face Transformers + DistilBERT fine-tuning + " +
+    "dataset preprocessing and class balancing + baseline " +
+    "comparison + macro-F1 and per-class evaluation + " +
+    "confusion matrix analysis + FastAPI inference service " +
+    "and Streamlit analytics dashboard.",
+  stack: [
+    "Python",
+    "Hugging Face Transformers",
+    "PyTorch",
+    "Hugging Face Datasets",
+    "Scikit-learn",
+    "Pandas",
+    "FastAPI",
+    "Streamlit"
+  ],
+  github: "https://github.com/foram07/customer-feedback-intelligence",
+  demo:   null,
+},
+{
+  id:            11,
+  title:         "AI Customer Support & Ticket Resolution Copilot",
+  category:      "genai",
+  categoryLabel: "Generative AI",
+  badgeVariant:  "amber",
+  color:         "#FBBF24",
+  featured:      false,
+  description:
+    "AI-powered support copilot that retrieves product " +
+    "knowledge, classifies customer requests, drafts grounded " +
+    "responses, and escalates complex cases to human agents.",
+  problem:
+    "Support teams spend significant time answering repetitive " +
+    "questions, categorizing tickets, and identifying cases " +
+    "that require specialized human intervention.",
+  approach:
+    "LangGraph conditional workflows + RAG knowledge base + " +
+    "intent and sentiment classification + tool-enabled ticket " +
+    "lookup + confidence-based escalation + human approval " +
+    "before sensitive actions + FastAPI and LangSmith monitoring.",
+  stack: [
+    "Python",
+    "LangGraph",
+    "LangChain",
+    "FAISS",
+    "Hugging Face Transformers",
+    "FastAPI",
+    "Pydantic",
+    "LangSmith",
+    "Streamlit"
+  ],
+  github: "https://github.com/foram07/ai-customer-support-copilot",
+  demo:   null,
+},
+{
+  id:            12,
+  title:         "Multimodal Document Intelligence Assistant",
+  category:      "genai",
+  categoryLabel: "Generative AI",
+  badgeVariant:  "amber",
+  color:         "#FBBF24",
+  featured:      false,
+  description:
+    "Multimodal AI assistant that understands complex PDFs, " +
+    "scanned documents, tables, charts, and embedded images " +
+    "to answer questions with page-level evidence.",
+  problem:
+    "Traditional document chat systems struggle with scanned " +
+    "pages, visual information, complex tables, and charts " +
+    "that cannot be understood through plain-text extraction alone.",
+  approach:
+    "PDF parsing + OCR + layout-aware extraction + multimodal " +
+    "LLM or vision model + text and image retrieval + " +
+    "vector search + page-level evidence citations + " +
+    "comparison against a text-only RAG baseline.",
+  stack: [
+    "Python",
+    "LangChain",
+    "Multimodal LLM",
+    "Vision Models",
+    "OCR",
+    "PyMuPDF",
+    "Vector Database",
+    "FastAPI",
+    "Streamlit"
+  ],
+  github: "https://github.com/foram07/multimodal-document-intelligence",
+  demo:   null,
+},
 
 ];
 
