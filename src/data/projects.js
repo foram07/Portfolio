@@ -394,7 +394,7 @@ demo:   null,
     "FastAPI",
     "Streamlit"
   ],
-  github: "https://github.com/foram07/multimodal-document-intelligence",
+  github: "https://github.com/foram07/Multimodal-Document-Intelligence-Assistant.git",
   demo:   null,
 },
 
