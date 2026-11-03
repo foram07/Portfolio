@@ -97,7 +97,7 @@ const EXPERIENCE = [
 
   {
     role:     "AI Research Intern",
-    company:  "MIT CSAIL",
+    company:  "Renacle Cycling",
     location: "Pune",
     duration: "Sep 2017 – Jun 2018",
     type:     "Internship",
