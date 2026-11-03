@@ -96,27 +96,24 @@ const EXPERIENCE = [
   },
 
   {
-    role:     "AI Research Intern",
-    company:  "MIT CSAIL",
-    location: "Cambridge, MA",
-    duration: "May 2019 – Aug 2019",
-    type:     "Internship",
+    role:     "Android Developer",
+    company:  "Renacle Cycling",
+    location: "Pune",
+    duration: "Sep 2017 – Jun 2018",
+    type:     "Full-time",
     current:  false,
     icon:     "🎓",
     description:
-      "Research on efficient transformer architectures and " +
-      "few-shot learning under Professor Jane Smith.",
+      ""
     highlights: [
-      "Co-authored paper on parameter-efficient fine-tuning accepted " +
-      "at the NeurIPS 2019 Efficient Deep Learning Workshop",
+      "Contributed to implementing a BLE smart lock product used to lock/unlock cycles and integrated the BLE SDK for device-application
+connectivity.",
 
-      "Developed a novel sparse attention mechanism reducing memory " +
-      "consumption by 30% without measurable accuracy loss",
-
-      "Open-sourced PyTorch implementation of sparse attention patterns " +
-      "— 400+ GitHub stars within the first month",
+      "Implemented geofencing, clustering, and push notification features within the application. " +
+      "Handled customer support issues professionally and resolved application-level bugs to improve user experience.",
+      "App link: play.google.com/store/search?q=Cymour&c=apps",
     ],
-    tags: ["Research", "Transformers", "PyTorch", "NeurIPS"],
+    tags: ["Android", "BLE SDK", "Geofencing", "Push Notifications"],
   },
 ];
 
