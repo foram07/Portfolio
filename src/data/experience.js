@@ -36,67 +36,97 @@
 /** @type {Job[]} */
 const EXPERIENCE = [
   {
-    role:     "Senior AI Engineer",
-    company:  "Nexus Intelligence",
-    location: "San Francisco, CA",
-    // Human-readable date range
-    duration: "Jan 2022 – Present",
+    role:     "Android Developer",
+    company:  "Excellent Web World",
+    location: "Ahmedabad",
+    duration: "Oct 2020 – May 2022",
     type:     "Full-time",
-    // Set to true to show the ● Current badge
-    current:  true,
+    current:  false,
     // Single emoji used as the timeline dot icon
-    icon:     "🏢",
-    // 1-sentence role overview shown beneath the header
+    icon:     "🎓",
     description:
-      "Lead AI engineer driving ML platform strategy and production " +
-      "deployments for Fortune 500 clients.",
-    // 3-5 bullet points — start each with a strong action verb
+      "",
     highlights: [
-      "Architected a real-time fraud detection system using Graph Neural " +
-      "Networks, reducing false positives by 42% and saving $3.2M annually",
+      "Developed a full Food Delivery application (customer + delivery boy) with offline" + 
+	"cart management, QPay & Wallet payment gateways, Google Maps integration,"+
+	" order status tracking, and real-time Chat via WebSocket.",
 
-      "Built end-to-end LLM pipeline for document intelligence using " +
-      "GPT-4 + RAG; achieved 91% accuracy on complex legal document Q&A",
+      "Contributed to a Parental Control application to block specified apps on children’s " + 	"devices until assigned tasks are completed.",
 
-      "Reduced model serving latency from 340ms → 45ms via TensorRT " +
-      "quantization and custom CUDA kernels",
+      "Implemented BLE device connectivity for a Smart Parking App and conducted research " +
+	 "in Indoor Navigation.",
 
-      "Mentored 4 junior engineers and established MLOps best practices " +
-      "across the organisation, cutting deployment incidents by 60%",
+      "Refactored legacy Java codebase to Kotlin, improving readability and  " + 
+	"maintainability, resulting in a measurable reduction in development time.",
+
+	"Collaborated cross-functionally to gather requirements, define project scope, and " + 	"ensure timely delivery."
+	
+	"Contributed to sound-reactive hardware integration with mobile devices via Bluetooth."
+	
     ],
     // Short technology tags shown as cyan pills at the base of the card
     tags: ["LLMs", "GNNs", "MLOps", "PyTorch", "AWS"],
   },
+  {
+    role:     "Android Developer",
+    company:  "Excellent Web World",
+    location: "Ahmedabad",
+    duration: "Oct 2020 – May 2022",
+    type:     "Full-time",
+    current:  false,
+    // Single emoji used as the timeline dot icon
+    icon:     "🎓",
+    description:
+      "",
+    highlights: [
+      "Developed a full Food Delivery application (customer + delivery boy) with offline" + 
+	"cart management, QPay & Wallet payment gateways, Google Maps integration,"+
+	" order status tracking, and real-time Chat via WebSocket.",
+
+      "Contributed to a Parental Control application to block specified apps on children’s " + 	"devices until assigned tasks are completed.",
+
+      "Implemented BLE device connectivity for a Smart Parking App and conducted research " +
+	 "in Indoor Navigation.",
+
+      "Refactored legacy Java codebase to Kotlin, improving readability and  " + 
+	"maintainability, resulting in a measurable reduction in development time.",
+
+	"Collaborated cross-functionally to gather requirements, define project scope, and " + 	"ensure timely delivery."
+	
+	"Contributed to sound-reactive hardware integration with mobile devices via Bluetooth."
+	
+    ],
+    // Short technology tags shown as cyan pills at the base of the card
+    tags: ["Kotlin", "Retrofit", "FCM", "RazorPay", "Room DB", "MVVM", "Dagger Hilt", "Coroutines", "QPay Payment Gateway"],
+  },
 
   {
-    role:     "Machine Learning Engineer",
-    company:  "DataFlow Systems",
-    location: "Austin, TX",
-    duration: "Jun 2020 – Dec 2021",
+    role:     "Software Engineer",
+    company:  "Avancer Technologies Ltd",
+    location: "Pune",
+    duration: "Jun 2018 – Oct 2019",
     type:     "Full-time",
     current:  false,
     icon:     "⚡",
     description:
-      "Developed NLP and computer vision solutions for B2B SaaS " +
-      "products serving 200K+ users.",
+      "",
     highlights: [
-      "Built a multi-label text classification system (BERT-based) with " +
-      "94.3% F1 score, processing 2M+ documents daily",
+      "Maintained a Supply Chain Management System product that monitors real-time" + 
+	"inventory using WebSockets.",
 
-      "Deployed object detection pipeline (YOLOv5) for manufacturing " +
-      "defect detection; improved QA throughput by 3×",
+      "Implemented Firebase Realtime Database for KPI report generation around " +
+	"productivity metrics; integrated barcode scanner for inbound/ outbound product tracking.",
 
-      "Implemented A/B testing framework for model evaluation, reducing " +
-      "production deployment risk by 60%",
+      "Built charting views to visualise warehouse product matrices; improved application" + 
+	"performance by optimising database schema.",
 
-      "Optimised distributed GPU training pipelines, cutting model " +
-      "training time by 55% across all projects",
+      "Collaborated with QA team to ensure robust testing and resolve application bugs.",
     ],
-    tags: ["NLP", "Computer Vision", "BERT", "YOLO", "GCP"],
+    tags: ["Android", "Firebase Realtime Database", "WebSockets", "Barcode Scanner", "Charts"],
   },
 
   {
-    role:     "Android Developer ",
+    role:     "Mobile Developer ",
     company:  "Renacle Cycling",
     location: "Pune",
     duration: "Sep 2017 – Jun 2018",
@@ -104,8 +134,7 @@ const EXPERIENCE = [
     current:  false,
     icon:     "🎓",
     description:
-      "Reesearch on efficient transformer architectures and " +
-      "few-shot learning under Professor Jane Smith.",
+      "",
     highlights: [
       "Contributed to implementing a BLE smart lock product used to lock/unlock cycles and" + 	"integrated the BLE SDK for device-application connectivity.",
 
