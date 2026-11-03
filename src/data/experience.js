@@ -96,8 +96,8 @@ const EXPERIENCE = [
   },
 
   {
-    role:     "Android Developer,
-    company:  "Renacle Cycling",
+    role:     "AI Research Intern",
+    company:  "MIT CSAIL",
     location: "Pune",
     duration: "Sep 2017 – Jun 2018",
     type:     "Internship",
