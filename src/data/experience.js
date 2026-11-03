@@ -100,11 +100,11 @@ const EXPERIENCE = [
     company:  "Renacle Cycling",
     location: "Pune",
     duration: "Sep 2017 – Jun 2018",
-    type:     "Internship",
+    type:     "Full-time",
     current:  false,
     icon:     "🎓",
     description:
-      "Research on efficient transformer architectures and " +
+      "Reesearch on efficient transformer architectures and " +
       "few-shot learning under Professor Jane Smith.",
     highlights: [
       "Co-authored paper on parameter-efficient fine-tuning accepted " +
