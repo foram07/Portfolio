@@ -96,7 +96,7 @@ const EXPERIENCE = [
   },
 
   {
-    role:     "AI Research Intern",
+    role:     "Android Developer ",
     company:  "Renacle Cycling",
     location: "Pune",
     duration: "Sep 2017 – Jun 2018",
