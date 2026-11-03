@@ -104,19 +104,16 @@ const EXPERIENCE = [
     current:  false,
     icon:     "🎓",
     description:
-      "Reesearch on efficient transformer architectures and " +
-      "few-shot learning under Professor Jane Smith.",
+      "",
     highlights: [
-      "Co-authored paper on parameter-efficient fine-tuning accepted " +
-      "at the NeurIPS 2019 Efficient Deep Learning Workshop",
+      "Contributed to implementing a BLE smart lock product used to lock/unlock cycles and integrated the BLE SDK for device-application
+connectivity.",
 
-      "Developed a novel sparse attention mechanism reducing memory " +
-      "consumption by 30% without measurable accuracy loss",
+      "Implemented geofencing, clustering, and push notification features within the application.",
 
-      "Open-sourced PyTorch implementation of sparse attention patterns " +
-      "— 400+ GitHub stars within the first month",
+      "Handled customer support issues professionally and resolved application-level bugs to improve user experience. ",
     ],
-    tags: ["Research", "Transformers", "PyTorch", "NeurIPS"],
+    tags: ["Android", "BLE SDK", "Geofencing", "Push Notifications"],
   },
 ];
 
