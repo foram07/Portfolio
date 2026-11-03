@@ -104,14 +104,15 @@ const EXPERIENCE = [
     current:  false,
     icon:     "🎓",
     description:
-      "",
+      "Reesearch on efficient transformer architectures and " +
+      "few-shot learning under Professor Jane Smith.",
     highlights: [
-      "Contributed to implementing a BLE smart lock product used to lock/unlock cycles and integrated the BLE SDK for device-application
-connectivity.",
+      "Contributed to implementing a BLE smart lock product used to lock/unlock cycles and" + 	"integrated the BLE SDK for device-application connectivity.",
 
       "Implemented geofencing, clustering, and push notification features within the application.",
 
-      "Handled customer support issues professionally and resolved application-level bugs to improve user experience. ",
+      "Handled customer support issues professionally and resolved application-level bugs to" +
+	"improve user experience. ",
     ],
     tags: ["Android", "BLE SDK", "Geofencing", "Push Notifications"],
   },
