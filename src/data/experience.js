@@ -103,16 +103,20 @@ const EXPERIENCE = [
     type:     "Full-time",
     current:  false,
     icon:     "🎓",
-    description:"abc"
+    description:
+      "Research on efficient transformer architectures and " +
+      "few-shot learning under Professor Jane Smith.",
     highlights: [
-     "Contributed to implementing a BLE smart lock product used to lock/unlock cycles and integrated" + "the BLE SDK for device-application" +
-"connectivity."+
+      "Co-authored paper on parameter-efficient fine-tuning accepted " +
+      "at the NeurIPS 2019 Efficient Deep Learning Workshop",
 
-      "Implemented geofencing, clustering, and push notification features within the application. " +
-      "Handled customer support issues professionally and resolved application-level bugs to improve user experience."+
-      "App link: play.google.com/store/search?q=Cymour&c=apps",
+      "Developed a novel sparse attention mechanism reducing memory " +
+      "consumption by 30% without measurable accuracy loss",
+
+      "Open-sourced PyTorch implementation of sparse attention patterns " +
+      "— 400+ GitHub stars within the first month",
     ],
-    tags: ["Android", "BLE SDK", "Geofencing", "Push Notifications"],
+    tags: ["Research", "Transformers", "PyTorch", "NeurIPS"],
   },
 ];
 
