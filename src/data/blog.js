@@ -39,6 +39,41 @@
 
 /** @type {BlogPost[]} */
 const BLOG_POSTS = [
+
+ {
+    title:
+      "Assumptions of Linear Regression: A Guide for Data Scientists",
+    // 2-3 sentences. Tell the reader what they'll get, not just what the topic is.
+    excerpt:
+      "A practical guide to the key assumptions of Linear Regression, explaining why they matter and how to validate them for reliable model performance. Explore essential concepts such as Linearity, Homoscedasticity, Multicollinearity, Autocorrelation, and Normality of Residuals to build more accurate and trustworthy regression models.",
+    // Human-readable publication date
+    date:     "Mar 5, 2025",
+    // Estimated read time shown alongside the date
+    readTime: "3 min read",
+    tags: [
+      { label: "ML",        variant: "cyan"   },
+      { label: "AI",         variant: "violet" },
+    ],
+    url: "https://medium.com/@foramadeshara/assumptions-of-linear-regression-a-guide-for-data-scientists-29bec6b63f7e",
+  },
+
+   {
+    title:
+      "Smarter, Safer AI: Tackling Hallucinations with Guardrails",
+    // 2-3 sentences. Tell the reader what they'll get, not just what the topic is.
+    excerpt:
+      "Explore how AI Guardrails help reduce LLM hallucinations and make Generative AI applications more reliable, secure, and trustworthy. Learn about practical techniques for validating outputs, enforcing safety policies, and building responsible AI systems.",
+    // Human-readable publication date
+    date:     "Sep 17, 2025",
+    // Estimated read time shown alongside the date
+    readTime: "4 min read",
+    tags: [
+      { label: "RAG",        variant: "cyan"   },
+      { label: "AI",         variant: "violet" },
+    ],
+    url: "https://medium.com/@foramadeshara/smarter-safer-ai-tackling-hallucinations-with-guardrails-2238ff09d3ca",
+  },
+
   {
     title:
       "RAG vs Fine-tuning: Choosing the Right LLM Strategy",
