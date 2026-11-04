@@ -36,19 +36,18 @@
 /** @type {Job[]} */
 const EXPERIENCE = [
   {
-    role:     "Android Developer",
-    company:  "Excellent Web World",
+    role:     "Software Engineer",
+    company:  "Mindinventory",
     location: "Ahmedabad",
-    duration: "Oct 2020 – May 2022",
+    duration: "May 2022 – Oct 2023",
     type:     "Full-time",
     current:  false,
     // Single emoji used as the timeline dot icon
     icon:     "🎓",
-    description:
-      "",
+    description:"",
     highlights: [
       "Developed a full Food Delivery application (customer + delivery boy) with offline" + 
-	"cart management, QPay & Wallet payment gateways, Google Maps integration,"+
+	" cart management, QPay & Wallet payment gateways, Google Maps integration,"+
 	" order status tracking, and real-time Chat via WebSocket.",
 
       "Contributed to a Parental Control application to block specified apps on children’s " + 	"devices until assigned tasks are completed.",
@@ -59,7 +58,7 @@ const EXPERIENCE = [
       "Refactored legacy Java codebase to Kotlin, improving readability and  " + 
 	"maintainability, resulting in a measurable reduction in development time.",
 
-	"Collaborated cross-functionally to gather requirements, define project scope, and " + 	"ensure timely delivery."
+	"Collaborated cross-functionally to gather requirements, define project scope, and " + 	"ensure timely delivery.",
 	
 	"Contributed to sound-reactive hardware integration with mobile devices via Bluetooth."
 	
@@ -79,27 +78,17 @@ const EXPERIENCE = [
     description:
       "",
     highlights: [
-      "Developed a full Food Delivery application (customer + delivery boy) with offline" + 
-	"cart management, QPay & Wallet payment gateways, Google Maps integration,"+
-	" order status tracking, and real-time Chat via WebSocket.",
+      "Collaborated with team members to gather requirements, provide technical expertise, and ensure project alignment with business objectives.",
 
-      "Contributed to a Parental Control application to block specified apps on children’s " + 	"devices until assigned tasks are completed.",
+      "Led design of Native UI for a Health & Lifestyle Application using Jetpack Compose, implementing hotel Wi-Fi connectivity, deals/offers retrieval, Exoplayer-based exercise video streaming, and activity progress charts.",
 
-      "Implemented BLE device connectivity for a Smart Parking App and conducted research " +
-	 "in Indoor Navigation.",
+      "Contributed to an in-house E-Commerce app incorporating AR-Core for Augmented Reality product display and custom Jetpack Compose UI.",
 
-      "Refactored legacy Java codebase to Kotlin, improving readability and  " + 
-	"maintainability, resulting in a measurable reduction in development time.",
-
-	"Collaborated cross-functionally to gather requirements, define project scope, and " + 	"ensure timely delivery."
-	
-	"Contributed to sound-reactive hardware integration with mobile devices via Bluetooth."
-	
+      "Built in-house MVVM Clean Architecture project templates and a shared Jetpack Compose component repository to accelerate fellow developers.",
     ],
     // Short technology tags shown as cyan pills at the base of the card
-    tags: ["Kotlin", "Retrofit", "FCM", "RazorPay", "Room DB", "MVVM", "Dagger Hilt", "Coroutines", "QPay Payment Gateway"],
+    tags: ["Kotlin", "Jetpack Compose", "Coroutines", "Retrofit", "MVVM with Clean Architecture", "Dagger Hilt", "ARCore"],
   },
-
   {
     role:     "Software Engineer",
     company:  "Avancer Technologies Ltd",

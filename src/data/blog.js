@@ -48,14 +48,14 @@ const BLOG_POSTS = [
       "generation vs domain-specific fine-tuning — with real cost and " +
       "latency benchmarks from three production deployments.",
     // Human-readable publication date
-    date:     "Mar 8, 2025",
+    date:     "Nov 4, 2026",
     // Estimated read time shown alongside the date
-    readTime: "8 min read",
+    readTime: "5 min read",
     tags: [
       { label: "LLMs",        variant: "cyan"   },
       { label: "RAG",         variant: "violet" },
     ],
-    url: "https://medium.com/@aryanmehta/rag-vs-finetuning",
+    url: "https://medium.com/@foramadeshara/rag-vs-fine-tuning-choosing-the-right-llm-strategy-53488263a28a",
   },
 
   {
