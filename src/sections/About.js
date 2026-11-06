@@ -36,19 +36,19 @@ function About() {
     },
   ];
 
-  // // Credential highlight card content
-  // const credentials = [
-  //   {
-  //     tag:    "Certificate",
-  //     name:   "Generative AI & Machine Learning",
-  //     issuer: "E&ICT Academy, IIT Kanpur",
-  //   },
-  //   {
-  //     tag:    "Experience",
-  //     name:   "Android Development",
-  //     issuer: "5 Years · Kotlin, Java, Jetpack Compose",
-  //   },
-  // ];
+  // Credential highlight card content
+  const credentials = [
+    {
+      tag:    "Certificate",
+      name:   "Generative AI & Machine Learning",
+      issuer: "E&ICT Academy, IIT Kanpur",
+    },
+    {
+      tag:    "Experience",
+      name:   "Android Development",
+      issuer: "5 Years · Kotlin, Java, Jetpack Compose",
+    },
+  ];
 
   // Focus areas — what I'm currently building toward
   const focusAreas = [
@@ -135,14 +135,14 @@ function About() {
           <!-- Right: credential + focus card -->
           <div class="about__sidebar reveal reveal-delay-2">
 
-            // <div class="about__cred-card">
-            //   <div class="about__cred-header">
-            //     <span class="label-mono" style="margin-bottom:0;">Credentials</span>
-            //   </div>
-            //   <div class="about__cred-list">
-            //     ${credentialItems}
-            //   </div>
-            // </div>
+            <div class="about__cred-card">
+              <div class="about__cred-header">
+                <span class="label-mono" style="margin-bottom:0;">Credentials</span>
+              </div>
+              <div class="about__cred-list">
+                ${credentialItems}
+              </div>
+            </div>
 
             <div class="about__focus-card">
               <div class="about__focus-header">
