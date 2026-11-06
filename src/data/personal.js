@@ -85,8 +85,7 @@ millions through intelligent automation.`,
   // ── Files ─────────────────────────────────────────────────
   /** Path to the downloadable PDF resume in /public */
   resumeUrl:   "/documents/resume.pdf",
-  /** Calendly scheduling link (optional — remove if unused) */
-  calendlyUrl: "https://calendly.com/aryanmehta",
+
 
   // ── Social links ──────────────────────────────────────────
   /** Used by Footer social buttons and Contact section links */

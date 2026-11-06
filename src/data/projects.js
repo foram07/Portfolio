@@ -66,8 +66,8 @@ const PROJECTS = [
     // 3 quantified outcomes — shown as metric cards inside the project card
     // Shown as monospace pills at the bottom of the card
     stack:  ["GPT-4", "LangChain", "FAISS", "FastAPI", "PostgreSQL", "Docker"],
-    github: "https://github.com/aryanmehta-ai/legalmind",
-    demo:   "https://legalmind-demo.vercel.app",
+    github: "",
+    demo:   "",
   },
 
   {
