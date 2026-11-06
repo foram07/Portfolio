@@ -100,30 +100,15 @@ const BLOG_POSTS = [
       "Step-by-step walkthrough of INT8 and INT4 quantization with " +
       "GPTQ and AWQ — including accuracy vs latency tradeoffs measured " +
       "on Llama-3, Mistral-7B, and a proprietary 13B model.",
-    date:     "Feb 14, 2025",
-    readTime: "12 min read",
+    date:     "Nov 6, 2026",
+    readTime: "7 min read",
     tags: [
       { label: "MLOps",        variant: "amber" },
       { label: "Optimization", variant: "cyan"  },
     ],
-    url: "https://medium.com/@aryanmehta/quantizing-llms",
+    url: "https://medium.com/@foramadeshara/quantizing-llms-for-production-a-hands-on-guide-d713c3a5e04e",
   },
 
-  {
-    title:
-      "Building Reliable ML Pipelines with Airflow + MLflow",
-    excerpt:
-      "How I design production ML workflows that handle failures " +
-      "gracefully, track every experiment, and enable one-click " +
-      "rollbacks — without any downtime.",
-    date:     "Jan 22, 2025",
-    readTime: "10 min read",
-    tags: [
-      { label: "MLOps",     variant: "amber"  },
-      { label: "Pipelines", variant: "violet" },
-    ],
-    url: "https://medium.com/@aryanmehta/ml-pipelines-airflow",
-  },
 
   {
     title:
@@ -132,12 +117,12 @@ const BLOG_POSTS = [
       "A production-grade deployment pattern covering model versioning, " +
       "health checks, async batching, and GPU memory management — " +
       "battle-tested across 10+ live services.",
-    date:     "Dec 10, 2024",
-    readTime: "14 min read",
+    date:     "Nov 6, 2026",
+    readTime: "7 min read",
     tags: [
       { label: "Deployment", variant: "emerald" },
       { label: "PyTorch",    variant: "cyan"    },
     ],
-    url: "https://medium.com/@aryanmehta/pytorch-fastapi-deploy",
+    url: "https://medium.com/@foramadeshara/from-notebook-to-api-deploying-pytorch-models-with-fastapi-ff5512bbfddf",
   },
 ];
