@@ -179,22 +179,17 @@ const EDUCATION = [
 const CERTIFICATIONS = [
   {
     icon:   "🏅",
-    name:   "AWS Certified Machine Learning – Specialty",
-    issuer: "Amazon Web Services · 2024",
+    name:   "Generative AI & Machine Learning",
+    issuer: "E&ICT Academy, IIT Kanpur 2025",
   },
   {
     icon:   "🏅",
-    name:   "TensorFlow Developer Certificate",
-    issuer: "Google · 2023",
+    name:   "Python: Beginner to Advanced For Data Professionals",
+    issuer: "Codebasics · 2024",
   },
   {
     icon:   "🏅",
-    name:   "Deep Learning Specialization (5 courses)",
-    issuer: "Coursera / deeplearning.ai · 2022",
-  },
-  {
-    icon:   "📄",
-    name:   "NeurIPS Workshop Paper — Parameter-Efficient Fine-Tuning",
-    issuer: "Neural Information Processing Systems · 2019",
+    name:   "Deep Learning with Keras and TensorFlow",
+    issuer: "Simplilearn · 2025",
   },
 ];
