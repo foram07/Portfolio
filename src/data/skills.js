@@ -11,7 +11,7 @@ const SKILLS = {
       title: "Languages",
       icon:  "⌨️",
       items: [
-        "Python", "Kotlin", "Java", "SQL", "Bash / Shell", "JavaScript",
+        "Python", "Kotlin", "Java", "SQL", "JavaScript",
       ],
     },
     {
@@ -40,7 +40,7 @@ const SKILLS = {
       title: "MLOps & DevOps",
       icon:  "⚙️",
       items: [
-        "Docker", "Kubernetes", "MLflow", "GitHub Actions", "Apache Airflow", "Terraform",
+        "Docker", "Kubernetes", "MLflow", "GitHub Actions",
       ],
     },
     {
