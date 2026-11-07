@@ -177,19 +177,39 @@ const EDUCATION = [
 
 /** @type {Certification[]} */
 const CERTIFICATIONS = [
+   {
+    icon:   "🏅",
+    name:   "Generative AI to Agentic AI with Business Projects",
+    issuer: "Simplilearn · 2025",
+  },
   {
     icon:   "🏅",
     name:   "Generative AI & Machine Learning",
     issuer: "E&ICT Academy, IIT Kanpur 2025",
   },
-  {
+   {
     icon:   "🏅",
-    name:   "Python: Beginner to Advanced For Data Professionals",
-    issuer: "Codebasics · 2024",
+    name:   "Natural Language Processing",
+    issuer: "Codebasics · 2025",
   },
   {
     icon:   "🏅",
     name:   "Deep Learning with Keras and TensorFlow",
     issuer: "Simplilearn · 2025",
+  },
+   {
+    icon:   "🏅",
+    name:   "SQL for Data Science",
+    issuer: "Codebasics · 2024",
+  },
+   {
+    icon:   "🏅",
+    name:   "Python: Beginner to Advanced For Data Professionals",
+    issuer: "Codebasics · 2024",
+  },
+    {
+    icon:   "🏅",
+    name:   "Android Developer",
+    issuer: "BitCode Technologies Pvt. Ltd. · 2017",
   },
 ];
