@@ -184,7 +184,7 @@ const CERTIFICATIONS = [
   },
   {
     icon:   "🏅",
-    name:   "Generative AI & Machine Learning",
+    name:   "Professional Certificate Course in Generative AI and Machine Learning",
     issuer: "E&ICT Academy, IIT Kanpur 2025",
   },
    {
