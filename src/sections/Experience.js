@@ -103,17 +103,23 @@ function CertificationItem(cert) {
       <div>
         <div class="cert-item__name">${cert.name}</div>
         <div class="cert-item__issuer">${cert.issuer}</div>
-        <div class="hero__cta reveal reveal-delay-4">
-        ${Button({
-                label:    "",
-                href:     resumeUrl,
-                variant:  "outline",
-                size:     "lg",
-                icon:     ICON_DOWNLOAD,
+      </div>
+        ${
+        cert_url
+          ? `
+            <div class="cert-item__action">
+              ${Button({
+                label: "Download Certificate",
+                href: cert_url,
+                variant: "outline",
+                size: "lg",
+                icon: ICON_DOWNLOAD,
                 download: true,
               })}
-        </div>
-      </div>
+            </div>
+          `
+          : ""
+      }
     </div>`;
 }
 
