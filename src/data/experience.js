@@ -155,14 +155,14 @@ const EDUCATION = [
     year:   "2014",
     // Format: "X.X / 4.0" or "X.X / 10" etc.
     gpa:    "First Class",
-    cert_url: "/documents/Generative_AI_Certificate.pdf",
+    edu_url: "/documents/Generative_AI_Certificate.pdf",
   },
   {
     degree: "Bachelor of Science in Computer Science",
     school: "Savitribai Phule Pune University",
     year:   "2011",
     gpa:    "Higher Secondary Class",
-    cert_url: "/documents/Generative_AI_Certificate.pdf",
+    edu_url: "/documents/Generative_AI_Certificate.pdf",
   },
 ];
 

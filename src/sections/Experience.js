@@ -87,6 +87,23 @@ function EducationItem(edu) {
         <span>${edu.year}</span>
         <span>Result: ${edu.gpa}</span>
       </div>
+        
+      ${
+        cert.edu_url
+          ? `
+            <div class="cert-item__action">
+              ${Button({
+                label: "",
+                href: cert.edu_url,
+                variant: "outline",
+                size: "lg",
+                icon: ICON_DOWNLOAD,
+                download: true,
+              })}
+            </div>
+          `
+          : ""
+      }
     </div>`;
 }
 
@@ -108,7 +125,7 @@ function CertificationItem(cert) {
         <div class="cert-item__name">${cert.name}</div>
         <div class="cert-item__issuer">${cert.issuer}</div>
       </div>
-
+      
       ${
         cert.cert_url
           ? `
