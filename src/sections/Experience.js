@@ -110,7 +110,7 @@ function CertificationItem(cert) {
       </div>
 
       ${
-        cert.cert_url
+        PERSONAL.cert_url
           ? `
             <div class="cert-item__action">
               ${Button({
