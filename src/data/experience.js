@@ -207,7 +207,7 @@ const CERTIFICATIONS = [
     icon:   "🏅",
     name:   "SQL for Data Science",
     issuer: "Codebasics · 2024",
-    cert_url: "/documents/SQL for Data Science.pdf.pdf",
+    cert_url: "/documents/sql.pdf",
   },
    {
     icon:   "🏅",
