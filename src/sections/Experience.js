@@ -96,7 +96,7 @@ function EducationItem(edu) {
                 label: "",
                 href: edu.edu_url,
                 variant: "outline",
-                size: "lg",
+                size: "sm",
                 icon: ICON_DOWNLOAD,
                 download: true,
               })}
@@ -134,7 +134,7 @@ function CertificationItem(cert) {
                 label: "",
                 href: cert.cert_url,
                 variant: "outline",
-                size: "lg",
+                size: "sm",
                 icon: ICON_DOWNLOAD,
                 download: true,
               })}

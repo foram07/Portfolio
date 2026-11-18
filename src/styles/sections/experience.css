@@ -61,6 +61,7 @@
 @media (max-width: 768px) { .edu-certs { grid-template-columns: 1fr; } }
 
 .edu-item {
+  display: flex;  align-items: center; gap: 16px;
   background: var(--bg-card); border: 1px solid var(--border-default);
   border-radius: var(--radius-lg); padding: 20px; margin-bottom: 16px;
   transition: all var(--tr-base);
