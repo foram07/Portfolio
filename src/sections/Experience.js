@@ -89,6 +89,7 @@ function EducationItem(edu) {
           <span>Result: ${edu.gpa}</span>
         </div>
       </div>
+      
         
       ${
         edu.edu_url
