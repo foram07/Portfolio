@@ -89,12 +89,12 @@ function EducationItem(edu) {
       </div>
         
       ${
-        cert.edu_url
+        edu.edu_url
           ? `
             <div class="cert-item__action">
               ${Button({
                 label: "",
-                href: cert.edu_url,
+                href: edu.edu_url,
                 variant: "outline",
                 size: "lg",
                 icon: ICON_DOWNLOAD,
