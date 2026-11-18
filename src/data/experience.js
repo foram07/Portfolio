@@ -155,12 +155,14 @@ const EDUCATION = [
     year:   "2014",
     // Format: "X.X / 4.0" or "X.X / 10" etc.
     gpa:    "First Class",
+    cert_url: "/documents/Generative_AI_Certificate.pdf",
   },
   {
     degree: "Bachelor of Science in Computer Science",
     school: "Savitribai Phule Pune University",
     year:   "2011",
     gpa:    "Higher Secondary Class",
+    cert_url: "/documents/Generative_AI_Certificate.pdf",
   },
 ];
 
@@ -181,35 +183,42 @@ const CERTIFICATIONS = [
     icon:   "🏅",
     name:   "Generative AI to Agentic AI with Business Projects",
     issuer: "Simplilearn · 2025",
+    cert_url: "/documents/GenAIAgenticAI.pdf",
   },
   {
     icon:   "🏅",
     name:   "Professional Certificate Course in Generative AI and Machine Learning",
     issuer: "E&ICT Academy, IIT Kanpur 2025",
+    cert_url: "/documents/Certificate - E&ICT Academy, IIT Kanpur.pdf",
   },
    {
     icon:   "🏅",
     name:   "Natural Language Processing",
     issuer: "Codebasics · 2025",
+    cert_url: "/documents/NLP.pdf",
   },
   {
     icon:   "🏅",
     name:   "Deep Learning with Keras and TensorFlow",
     issuer: "Simplilearn · 2025",
+    cert_url: "/documents/DeepLearning.pdf",
   },
    {
     icon:   "🏅",
     name:   "SQL for Data Science",
     issuer: "Codebasics · 2024",
+    cert_url: "/documents/SQL for Data Science.pdf.pdf",
   },
    {
     icon:   "🏅",
     name:   "Python: Beginner to Advanced For Data Professionals",
     issuer: "Codebasics · 2024",
+    cert_url: "/documents/Python.pdf",
   },
     {
     icon:   "🏅",
     name:   "Android Developer",
     issuer: "BitCode Technologies Pvt. Ltd. · 2017",
+    cert_url: "/documents/Python.pdf",
   },
 ];
