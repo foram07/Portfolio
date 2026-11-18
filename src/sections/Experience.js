@@ -104,7 +104,7 @@ function CertificationItem(cert) {
         ${cert.icon || ""}
       </span>
 
-      <div>
+      <div class="cert-item__details">
         <div class="cert-item__name">${cert.name}</div>
         <div class="cert-item__issuer">${cert.issuer}</div>
       </div>
@@ -115,7 +115,7 @@ function CertificationItem(cert) {
             <div class="cert-item__action">
               ${Button({
                 label: "",
-                href: cert.cert_url,
+                href: PERSONAL.cert_url,
                 variant: "outline",
                 size: "lg",
                 icon: ICON_DOWNLOAD,
