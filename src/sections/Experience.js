@@ -91,7 +91,7 @@ function EducationItem(edu) {
       ${
         edu.edu_url
           ? `
-            <div class="cert-item__action">
+            <div class="edu-item__action">
               ${Button({
                 label: "",
                 href: edu.edu_url,

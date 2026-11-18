@@ -74,6 +74,10 @@
   font-size: 0.8rem; color: var(--text-secondary);
   padding-left: 14px; position: relative;
 }
+.edu-item__action {
+  margin-left: auto;
+  flex-shrink: 0;
+}
 .edu-item__highlight::before { content: '·'; position: absolute; left: 0; color: var(--accent); font-size: 1.2rem; line-height: 1.2; }
 
 .cert-item {
@@ -86,3 +90,7 @@
 .cert-item__icon { font-size: 1.4rem; flex-shrink: 0; }
 .cert-item__name   { font-size: 0.875rem; font-weight: 600; margin-bottom: 2px; }
 .cert-item__issuer { font-size: 0.78rem; color: var(--text-muted); }
+.cert-item__action {
+  margin-left: auto;
+  flex-shrink: 0;
+}
