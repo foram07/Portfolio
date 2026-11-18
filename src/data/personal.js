@@ -85,6 +85,7 @@ millions through intelligent automation.`,
   // ── Files ─────────────────────────────────────────────────
   /** Path to the downloadable PDF resume in /public */
   resumeUrl:   "/documents/resume.pdf",
+  cert_url: "/documents/Generative_AI_Certificate.pdf",
 
 
   // ── Social links ──────────────────────────────────────────
