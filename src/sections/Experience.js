@@ -96,21 +96,26 @@ function EducationItem(edu) {
  * @param {{ icon:string, name:string, issuer:string }} cert
  * @returns {string} HTML string
  */
+
 function CertificationItem(cert) {
   return `
     <div class="cert-item">
-      <span class="cert-item__icon" aria-hidden="true">${cert.icon}</span>
+      <span class="cert-item__icon" aria-hidden="true">
+        ${cert.icon || ""}
+      </span>
+
       <div>
         <div class="cert-item__name">${cert.name}</div>
         <div class="cert-item__issuer">${cert.issuer}</div>
       </div>
-        ${
-        cert_url
+
+      ${
+        cert.cert_url
           ? `
             <div class="cert-item__action">
               ${Button({
                 label: "Download Certificate",
-                href: cert_url,
+                href: cert.cert_url,
                 variant: "outline",
                 size: "lg",
                 icon: ICON_DOWNLOAD,
@@ -120,7 +125,8 @@ function CertificationItem(cert) {
           `
           : ""
       }
-    </div>`;
+    </div>
+  `;
 }
 
 /**
