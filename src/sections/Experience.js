@@ -81,11 +81,14 @@ function EducationItem(edu) {
 
   return `
     <div class="edu-item">
-      <div class="edu-item__degree">${edu.degree}</div>
-      <div class="edu-item__school">${edu.school}</div>
-      <div class="edu-item__meta">
-        <span>${edu.year}</span>
-        <span>Result: ${edu.gpa}</span>
+      <div class="edu-item__details">
+        <div class="edu-item__degree">${edu.degree}</div>
+        <div class="edu-item__school">${edu.school}</div>
+        <div class="edu-item__meta">
+          <span>${edu.year}</span>
+          <span>Result: ${edu.gpa}</span>
+        </div>
+      </div>
       </div>
         
       ${
