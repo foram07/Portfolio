@@ -114,7 +114,7 @@ function CertificationItem(cert) {
           ? `
             <div class="cert-item__action">
               ${Button({
-                label: "Download Certificate",
+                label: "",
                 href: cert.cert_url,
                 variant: "outline",
                 size: "lg",
